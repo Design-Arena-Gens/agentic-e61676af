@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0a0d;
+  --fg: #e7e7ea;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(1200px 800px at 50% 10%, #12121a, var(--bg));
+  color: var(--fg);
+}
+
+/* Neon glow helpers */
+.neon-glow {
+  filter: drop-shadow(0 0 12px rgba(63, 216, 255, 0.7));
+}
+
+.btn {
+  @apply rounded-full px-4 py-2 font-medium transition active:scale-95;
+}
+
+.btn-primary {
+  @apply bg-neon-blue/20 text-neon-blue border border-neon-blue/40 hover:bg-neon-blue/30;
+}
+
+.btn-ghost {
+  @apply bg-white/5 text-white border border-white/10 hover:bg-white/10;
+}
